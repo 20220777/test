@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="m">
+      <UniqueIdentifier>{ECCD9D37-054A-4A9E-984C-FCB4033AE264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_c">
+      <UniqueIdentifier>{3f283608-c4c8-449e-bfe7-b9d5eb3a919d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="m\__wcommon.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="m\__wtray.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="m\xm.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="_c\_sifr.c">
+      <Filter>_c</Filter>
+    </ClCompile>
+    <ClCompile Include="m\__util.c">
+      <Filter>m</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="m\__wcommon.h">
+      <Filter>m</Filter>
+    </ClInclude>
+    <ClInclude Include="m\__wtray.h">
+      <Filter>m</Filter>
+    </ClInclude>
+    <ClInclude Include="m\xm.h">
+      <Filter>m</Filter>
+    </ClInclude>
+    <ClInclude Include="_c\_sifr.h">
+      <Filter>_c</Filter>
+    </ClInclude>
+    <ClInclude Include="m\__util.h">
+      <Filter>m</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="sifr.kit.w32.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="lite.link.ico" />
+  </ItemGroup>
+</Project>

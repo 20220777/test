@@ -1,0 +1,31 @@
+#! /bin/bash
+
+################################################################################
+################################################################################
+################################################################################
+TARGET=/opt/share
+
+\cp -rfp ../../../imtif/i/*.h coms/
+\cp -rfp ../../../mtif/hf.a32/*.h coms/
+\cp -rfp ../../../mtif/hf.a32/libimtif.hf.a32.a coms/
+\cp -rfp ../../../mtif/hf.a32/libmtif.x.hf.a32.a coms/
+\cp -rfp ../../../mtif/hf.a32/libio.hf.a32.a coms/
+\cp -rfp ../../../mtif/hf.a32/imtif.hf.a32.a coms/
+\cp -rfp ../../../mtif/hf.a32/mtif.hf.a32.so coms/
+
+
+cd ../
+tar cvf ngine.tar \
+ngine/nxx \
+ngine/addon \
+ngine/dccf \
+ngine/dpcf \
+ngine/dzcf \
+ngine/i \
+ngine/n \
+ngine/z \
+ngine/coms
+
+\cp -rfp ngine.tar $TARGET
+cd $TARGET
+tar xvf ngine.tar

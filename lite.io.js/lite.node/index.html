@@ -1,0 +1,89 @@
+﻿<!--
+/*****************************************************************************/
+/*                                                                           */
+/*            DVLab (Data Visualization Lab) Web version 1.0                 */
+/*                                                                           */
+/*****************************************************************************/
+/*****************************************************************************/
+/*                                                                           */
+/*  File Name         : index.html                                           */
+/*                                                                           */
+/*  Description       : This file contains all the necessary constants ,     */
+/*                      type definitions according to CAST specifications,	 */
+/*                      common system headers.                               */
+/*                                                                           */
+/*                                                                           */
+/*  Issues / Problems : None                                                 */
+/*                                                                           */
+/*  Revision History  :                                                      */
+/*                                                                           */
+/*        DD MM YYYY   Author(s)        Changes (Describe the changes made)  */
+/*        06 01 2019   Shin Seunghyeok  Draft                                */
+/*        15 11 2019   Shin Seunghyeok  Final Draft                          */
+/*                                                                           */
+/*****************************************************************************/
+-->
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<link type="text/css" href="lib/liteio.lib.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="index.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="common.css" rel="stylesheet" media="screen" />
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="lib/liteio.lib.js"></script>
+<script type="text/javascript" src="lib/liteio.websocket.js"></script>
+<script type="text/javascript" src="lib/liteio.container.js"></script>
+<script type="text/javascript" src="chart/liteio.chart.js"></script>
+<script type="text/javascript" src="chart/liteio.progress.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SDx Gateway Dashboard</title>
+</head>
+
+<body style="margin:0px;">
+
+<div
+  id="wss_ip"
+  style="display:none;"
+>
+<script>
+/**
+  var url = window.location.host;
+  var host = url.split(':');
+  $('#wss_ip').text(host[0]);
+**/
+  $('#wss_ip').text("192.168.0.9");
+
+
+</script>
+</div>
+
+
+<div
+  id="wss_port"
+  style="display:none"
+>7810</div>
+
+
+
+<!---
+<div id="debug"></div>
+--->
+
+SDx Gateway 2222
+
+
+</body>
+
+
+
+
+</html>
+
+

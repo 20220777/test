@@ -1,0 +1,10 @@
+#! /bin/bash
+
+getlib a32;
+getlib a64;
+getlib hf.a32;
+getlib hf.a64;
+getlib x32;
+getlib x64;
+getlib x86;
+getlib x86_64;

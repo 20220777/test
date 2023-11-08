@@ -1,0 +1,24 @@
+#! /bin/bash
+
+PLATFORMTARGET=$1
+
+CODEX_PATH=../../../codex/
+
+if [ -z $PLATFORMTARGET ] 
+then
+PLATFORMTARGET=x32
+fi
+
+mkdir -p ./opt/h
+mkdir -p ./opt/lib/$PLATFORMTARGET
+\cp -rfp $CODEX_PATH/$PLATFORMTARGET/*.h                          ./opt/h
+
+if [ $PLATFORMTARGET == "x86" ] || [ $PLATFORMTARGET == "x86_64" ]
+then
+\cp -rfp $CODEX_PATH/$PLATFORMTARGET/*.x*.lib        ./opt/lib/$PLATFORMTARGET
+\cp -rfp $CODEX_PATH/$PLATFORMTARGET/*.$PLATFORMTARGET.dll          ./out
+else
+\cp -rfp $CODEX_PATH/$PLATFORMTARGET/*.x*.a         ./opt/lib/$PLATFORMTARGET
+\cp -rfp $CODEX_PATH/$PLATFORMTARGET/*.$PLATFORMTARGET.so           ./out
+fi
+

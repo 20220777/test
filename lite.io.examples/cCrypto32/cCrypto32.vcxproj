@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{aa184188-38ce-4faa-ae4d-c6aff38a7715}</ProjectGuid>
+    <RootNamespace>cCrypto32</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>out</OutDir>
+    <IntDir>$(OutDir)\$(Configuration).$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>out</OutDir>
+    <IntDir>$(OutDir)\$(Configuration).$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>out</OutDir>
+    <IntDir>$(OutDir)\$(Configuration).$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>out</OutDir>
+    <IntDir>$(OutDir)\$(Configuration).$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>.;kbkdf;$(ProjectDir)../../lite.io/$(PlatformTarget);$(ProjectDir)\..\..\usr\openssl\v1.1.1t\$(PlatformTarget)\include\;$(ProjectDir)\..\..\usr\openssl\v1.1.1t\$(PlatformTarget)\include\openssl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;crypt32.lib;libcrypto.lib;libssl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\usr\openssl\v1.1.1t\$(PlatformTarget)\lib\</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>@copy /Y $(ProjectDir)..\..\lite.io\$(PlatformTarget)\*.dll $(OutDir)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>.;kbkdf;$(ProjectDir)../../lite.io/$(PlatformTarget);$(ProjectDir)\..\..\usr\openssl\v1.1.1t\$(PlatformTarget)\include\;$(ProjectDir)\..\..\usr\openssl\v1.1.1t\$(PlatformTarget)\include\openssl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;crypt32.lib;libcrypto.lib;libssl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\usr\openssl\v1.1.1t\$(PlatformTarget)\lib\</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>@copy /Y $(ProjectDir)..\..\lite.io\$(PlatformTarget)\*.dll $(OutDir)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>x64;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>.;kbkdf;$(ProjectDir)../../lite.io/$(LlvmPlatformName);$(ProjectDir)\..\..\usr\openssl\v1.1.1t\$(LlvmPlatformName)\include\;$(ProjectDir)\..\..\usr\openssl\v1.1.1t\$(LlvmPlatformName)\include\openssl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\usr\openssl\v1.1.1t\$(LlvmPlatformName)\lib\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;crypt32.lib;libcrypto.lib;libssl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>@copy /Y $(ProjectDir)..\..\lite.io\$(LlvmPlatformName)\*.dll $(OutDir)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>x64;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>.;kbkdf;$(ProjectDir)../../lite.io/$(LlvmPlatformName);$(ProjectDir)\..\..\usr\openssl\v1.1.1t\$(LlvmPlatformName)\include\;$(ProjectDir)\..\..\usr\openssl\v1.1.1t\$(LlvmPlatformName)\include\openssl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\usr\openssl\v1.1.1t\$(LlvmPlatformName)\lib\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;crypt32.lib;libcrypto.lib;libssl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>@copy /Y $(ProjectDir)..\..\lite.io\$(LlvmPlatformName)\*.dll $(OutDir)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ec_kcdsa\ec-kcdsa.c" />
+    <ClCompile Include="ec_kcdsa\ecc.c" />
+    <ClCompile Include="ec_kcdsa\ec_gf2n.c" />
+    <ClCompile Include="ec_kcdsa\ec_gfp.c" />
+    <ClCompile Include="ec_kcdsa\ec_kcdsa_main.c" />
+    <ClCompile Include="ec_kcdsa\EC_KCDSA_SHA224.c" />
+    <ClCompile Include="ec_kcdsa\EC_KCDSA_SHA256.c" />
+    <ClCompile Include="ec_kcdsa\gf2n.c" />
+    <ClCompile Include="ec_kcdsa\gfp.c" />
+    <ClCompile Include="ec_kcdsa\mpz.c" />
+    <ClCompile Include="kbkdf\kbkdf_test.c" />
+    <ClCompile Include="kbkdf\KISA_CMAC.c" />
+    <ClCompile Include="kbkdf\KISA_HMAC.c" />
+    <ClCompile Include="kbkdf\KISA_KBKDF.c" />
+    <ClCompile Include="kbkdf\KISA_SEED.c" />
+    <ClCompile Include="kbkdf\KISA_SHA256.c" />
+    <ClCompile Include="kbkdf\main.c" />
+    <ClCompile Include="kbkdf\util.c" />
+    <ClCompile Include="kcdsa\bignum.c" />
+    <ClCompile Include="kcdsa\kcdsa.c" />
+    <ClCompile Include="kcdsa\kcdsa_main.c" />
+    <ClCompile Include="kcdsa\KCDSA_SHA224.c" />
+    <ClCompile Include="kcdsa\KCDSA_SHA256.c" />
+    <ClCompile Include="m.c" />
+    <ClCompile Include="ossl.c" />
+    <ClCompile Include="sha3.c" />
+    <ClCompile Include="__util.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ec_kcdsa\ec-kcdsa.h" />
+    <ClInclude Include="ec_kcdsa\ecc.h" />
+    <ClInclude Include="ec_kcdsa\ec_gf2n.h" />
+    <ClInclude Include="ec_kcdsa\ec_gfp.h" />
+    <ClInclude Include="ec_kcdsa\ec_kcdsa_main.h" />
+    <ClInclude Include="ec_kcdsa\EC_KCDSA_SHA224.h" />
+    <ClInclude Include="ec_kcdsa\EC_KCDSA_SHA256.h" />
+    <ClInclude Include="ec_kcdsa\gf2n.h" />
+    <ClInclude Include="ec_kcdsa\gfp.h" />
+    <ClInclude Include="ec_kcdsa\mpz.h" />
+    <ClInclude Include="ec_kcdsa\sysconf.h" />
+    <ClInclude Include="ec_kcdsa\type.h" />
+    <ClInclude Include="kbkdf\common.h" />
+    <ClInclude Include="kbkdf\kbkdf_test.h" />
+    <ClInclude Include="kbkdf\KISA_CMAC.h" />
+    <ClInclude Include="kbkdf\KISA_HMAC.h" />
+    <ClInclude Include="kbkdf\KISA_KBKDF.h" />
+    <ClInclude Include="kbkdf\KISA_SEED.h" />
+    <ClInclude Include="kbkdf\KISA_SHA256.h" />
+    <ClInclude Include="kbkdf\util.h" />
+    <ClInclude Include="kcdsa\bignum.h" />
+    <ClInclude Include="kcdsa\kcdsa.h" />
+    <ClInclude Include="kcdsa\kcdsa_main.h" />
+    <ClInclude Include="kcdsa\KCDSA_SHA224.h" />
+    <ClInclude Include="kcdsa\KCDSA_SHA256.h" />
+    <ClInclude Include="kcdsa\kcdsa_type.h" />
+    <ClInclude Include="kisa_key.h" />
+    <ClInclude Include="ossl.h" />
+    <ClInclude Include="sha3.h" />
+    <ClInclude Include="__util.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

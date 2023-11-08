@@ -1,0 +1,60 @@
+
+static const char SEED_ECB[][4][51200] =
+{
+  {
+  "828E9E067BC2E9B306A3FA99426787AC",
+  "21C7B0986CF8265708DD9202777B35E7",
+  "82E1674DBEF09F6B73552C6329A1A9D9",
+  },
+};
+
+
+void* sifr_seed_ecb_encode_callback(void* h, void* o, void* w, void* l)
+{
+  display((uint8_t*)w, (int32_t)l, __FUNCTION__);
+  return 0;
+}
+
+void* sifr_seed_ecb_decode_callback(void* h, void* o, void* w, void* l)
+{
+  display((uint8_t*)w, (int32_t)l, __FUNCTION__);
+  return 0;
+}
+
+
+
+
+void sifr()
+{
+  void*   h = 0;
+  int32_t e = 0;
+  int8_t  iobuf[8][4096] = {0};
+  int8_t  ubuf[4096] = {0};
+  int8_t  obuf[8][4096] = {0};
+  int32_t sz[8] = {32, 32, 32, 32, 8, 32, 32, 64};
+  int32_t lstatus[2] = {0};
+  int8_t  version[1024] = {0};
+  int8_t  author[1024] = {0};
+  int8_t  module_name[1024] = {0};
+
+  sz[0] = ascii_to_hex(SEED_ECB[0][0], iobuf[0]);
+  sz[1] = ascii_to_hex(SEED_ECB[0][1], iobuf[1]);
+  sz[2] = ascii_to_hex(SEED_ECB[0][2], iobuf[2]);
+
+  display(iobuf[0], sz[0], "Input Key");
+  display(iobuf[1], sz[1], "Input Text");
+  display(iobuf[2], sz[2], "expected Output Text");
+  e = __sifr_seed_ecb_encode(h, iobuf[0], sz[0], iobuf[1], sz[1], obuf[0], 4096, sifr_seed_ecb_encode_callback, h);
+  display(obuf[0], e, "SEED ECB ENCODE");
+  e = __sifr_seed_ecb_decode(h, iobuf[0], sz[0], obuf[0], e, obuf[1], 4096, sifr_seed_ecb_decode_callback, h);
+  display(obuf[1], e, "SEED ECB DECODE");
+}
+
+
+////// 아래 ifr() 함수만 적당한곳에 넣어서 테스트
+void main()
+{
+
+  sifr();
+
+}

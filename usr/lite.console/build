@@ -1,0 +1,50 @@
+#! /bin/bash
+
+function printTitle()
+{
+  echo "--------------------------------------------------------------------------------"
+  echo " "
+  echo " "
+  echo " $1"
+  echo " "
+  echo " "
+  echo "--------------------------------------------------------------------------------"
+}
+
+if [ $1 == "all" -o $1 == "x64" -o $1 == "lite.console" ]
+then
+ARCH=x64
+OTYPE=.out
+ONAME=lite.console
+printTitle "$ONAME $ARCH BUILD START"
+mkdir -p coms;
+mkdir -p coms/__nio;
+\cp -rfp `pwd`/../../lite.io/__nio/*.h coms/__nio;
+\cp -rfp `pwd`/../../lite.io/$ARCH/* coms;
+CLFAGS=-m64 CXXFLAGS=-m64 LDFLAGS=-m64 CROSS_COMPILE=no ARCH_TYPE=$ARCH OUTPUT_TYPE=$OTYPE OUTPUT_NAME=$ONAME DEBUG=0 make clean;
+CLFAGS=-m64 CXXFLAGS=-m64 LDFLAGS=-m64 CROSS_COMPILE=no ARCH_TYPE=$ARCH OUTPUT_TYPE=$OTYPE OUTPUT_NAME=$ONAME DEBUG=0 make dir;
+CLFAGS=-m64 CXXFLAGS=-m64 LDFLAGS=-m64 CROSS_COMPILE=no ARCH_TYPE=$ARCH OUTPUT_TYPE=$OTYPE OUTPUT_NAME=$ONAME DEBUG=0 make all;
+fi
+
+if [ $1 == "all" -o $1 == "x64" -o $1 == "liblite.console.ua" ]
+then
+ARCH=x64
+OTYPE=.a
+ONAME=liblite.console.ua
+printTitle "$ONAME $ARCH BUILD START"
+CLFAGS=-m64 CXXFLAGS=-m64 LDFLAGS=-m64 CROSS_COMPILE=no ARCH_TYPE=$ARCH OUTPUT_TYPE=$OTYPE OUTPUT_NAME=$ONAME DEBUG=0 make clean;
+CLFAGS=-m64 CXXFLAGS=-m64 LDFLAGS=-m64 CROSS_COMPILE=no ARCH_TYPE=$ARCH OUTPUT_TYPE=$OTYPE OUTPUT_NAME=$ONAME DEBUG=0 make dir;
+CLFAGS=-m64 CXXFLAGS=-m64 LDFLAGS=-m64 CROSS_COMPILE=no ARCH_TYPE=$ARCH OUTPUT_TYPE=$OTYPE OUTPUT_NAME=$ONAME DEBUG=0 make all;
+fi
+
+
+if [ $1 == "all" -o $1 == "x64" -o $1 == "lite.console.usr" ]
+then
+ARCH=x64
+OTYPE=.out
+ONAME=lite.console.usr
+printTitle "$ONAME $ARCH BUILD START"
+CLFAGS=-m64 CXXFLAGS=-m64 LDFLAGS=-m64 CROSS_COMPILE=no ARCH_TYPE=$ARCH OUTPUT_TYPE=$OTYPE OUTPUT_NAME=$ONAME DEBUG=0 make clean;
+CLFAGS=-m64 CXXFLAGS=-m64 LDFLAGS=-m64 CROSS_COMPILE=no ARCH_TYPE=$ARCH OUTPUT_TYPE=$OTYPE OUTPUT_NAME=$ONAME DEBUG=0 make dir;
+CLFAGS=-m64 CXXFLAGS=-m64 LDFLAGS=-m64 CROSS_COMPILE=no ARCH_TYPE=$ARCH OUTPUT_TYPE=$OTYPE OUTPUT_NAME=$ONAME DEBUG=0 make all;
+fi

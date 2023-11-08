@@ -1,0 +1,4 @@
+﻿  Main.cpp
+C:\opt\team_c\usr\Light_water\Prac0915_2\Prac0915_2\Main.cpp(2,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+C:\opt\team_c\usr\Light_water\Prac0915_2\Prac0915_2\Main.cpp(3,30): warning C4081: 'newline'이(가) 있어야 하는데 ';'이(가) 있습니다.
+  Prac0915_2.vcxproj -> C:\opt\team_c\usr\Light_water\Prac0915_2\x64\Debug\Prac0915_2.exe

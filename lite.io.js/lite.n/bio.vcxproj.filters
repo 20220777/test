@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="n">
+      <UniqueIdentifier>{2A259421-3C5F-4159-B84B-6BCEB628561F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="z">
+      <UniqueIdentifier>{9B75AE24-2BFB-40F8-A6CA-300048F7B4D9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dzcf">
+      <UniqueIdentifier>{4FF43D77-E232-40AD-B703-7A02317784A2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="i">
+      <UniqueIdentifier>{AC7D1174-227A-4383-B27A-17C2EABEDF2D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dccf">
+      <UniqueIdentifier>{55594A09-79FA-469A-AF33-0ADE00D20D4D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dpcf">
+      <UniqueIdentifier>{B2E014BC-8339-49BC-9A82-616504DEAF3E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="z\liteio.c">
+      <Filter>z</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nwsc.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nwsd.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nhttp.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nhttpd.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nhttpsd.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nmdns.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nserial.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\ntcpd.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\ntcpsd.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\ntcp.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="dzcf\network.c">
+      <Filter>dzcf</Filter>
+    </ClCompile>
+    <ClCompile Include="i\ihttpd.c">
+      <Filter>i</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nzigbee.c">
+      <Filter>n</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="postBuild.bat" />
+    <None Include="preBuild.bat" />
+    <None Include="i\winterface.i">
+      <Filter>i</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="z\liteio.h">
+      <Filter>z</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nwsc.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nwsd.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nhttp.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nhttpd.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nhttpsd.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\njson.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nmdns.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nserial.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nsvrcommon.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\ntcpd.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\ntcpsd.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nutil.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\ntcp.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="dzcf\network.h">
+      <Filter>dzcf</Filter>
+    </ClInclude>
+    <ClInclude Include="i\ihttpd.h">
+      <Filter>i</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nzigbee.h">
+      <Filter>n</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

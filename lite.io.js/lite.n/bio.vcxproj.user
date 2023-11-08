@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerWorkingDirectory>out</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>--m console --d WAAS_NODE --s WAAS_NODE --l $(ProjectDir)\out --e d2 --httpd_home c:\waas\htdocs\ --httpd_index index.html --serial_port COM7 --serial_baudrate 115200 --zigbee_port COM7</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommand>$(ProjectDir)\out\bio.x86.exe</LocalDebuggerCommand>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerWorkingDirectory>out</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>--m console --d WAAS_NODE --s WAAS_NODE --l $(ProjectDir)\out --e d2 --httpd_home c:\waas\htdocs\ --httpd_index index.html --serial_port COM7 --serial_baudrate 115200 --zigbee_port COM7</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommand>$(ProjectDir)\out\bio.x86.exe</LocalDebuggerCommand>
+  </PropertyGroup>
+</Project>

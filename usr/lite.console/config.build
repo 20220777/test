@@ -1,0 +1,77 @@
+#! /bin/bash
+#postbuild `pwd`/../.. `pwd` liblite.sifr $EXTYPE $OTYPE lite.sifr hash .hash.$EXTYPE.txt
+PROJ_DIR=0;
+PROJ_NAME=1;
+ARCH=2;
+EXTYPE=3;
+HASH=4;
+PRODUCT=5;
+PACKAGE=6
+MAX=7;
+
+params=($@);
+
+for ((i=0 ; i<$# ; i++))
+do
+  #if [ "${params[i]}" == "-soldir" ]; then
+  #    values[$SOL_DIR]=${params[i+1]};
+  #    ((i++));
+  #fi
+  if [ "${params[i]}" == "-projdir" ]; then
+      values[$PROJ_DIR]=${params[i+1]};
+      ((i++));
+  fi
+  if [ "${params[i]}" == "-projname" ]; then
+      values[$PROJ_NAME]=${params[i+1]};
+      ((i++));
+  fi
+  if [ "${params[i]}" == "-arch" ]; then
+      values[$ARCH]=${params[i+1]};
+      ((i++));
+  fi
+  if [ "${params[i]}" == "-extype" ]; then
+      values[$EXTYPE]=${params[i+1]};
+      ((i++));
+  fi
+  if [ "${params[i]}" == "-hash" ]; then
+      values[$HASH]=${params[i+1]};
+      ((i++));
+  fi
+  if [ "${params[i]}" == "-produce" ]; then
+      values[$PRODUCT]=${params[i+1]};
+      ((i++));
+  fi
+  if [ "${params[i]}" == "-package" ]; then
+      values[$PACKAGE]=${params[i+1]};
+      ((i++));
+  fi
+done
+
+#for ((i=0 ; i<MAX ; i++))
+#do
+#  echo $i ", " ${values[i]}
+#done
+#
+#exit
+
+SOL_DIR=$(<.config.soldir.uware)
+PUBLISH=$(<.config.output.uware)
+
+if [ -f .version ]; then
+	while read line; do _ver=$line; done<.version;
+fi
+ver=${_ver:1:16};
+
+_LOCAL=${values[$PRODUCT]%:*};
+_REMOTE=${values[$PRODUCT]#*:};
+echo "+------------------+------------------------------------------------------------"
+echo "| VERSION          | $ver"
+echo "| OUTPUT           | ${values[$PROJ_NAME]}.${values[$ARCH]}${values[$EXTYPE]}"
+echo "| PATH of Solution | $SOL_DIR"
+echo "| PATH of Project  | ${values[$PROJ_DIR]}"
+echo "| PATH of Product  | local (${values[$PRODUCT]%:*})"
+echo "|                  | remote(${values[$PRODUCT]#*:})"
+echo "| HASH             | ${values[$HASH]}"
+echo "| PACKAGE          | ${values[$PACKAGE]}"
+echo "| PATH of Output   | $PUBLISH"
+echo "+------------------+------------------------------------------------------------"

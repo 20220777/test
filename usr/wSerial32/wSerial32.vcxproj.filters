@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="m">
+      <UniqueIdentifier>{57F7D18D-E77B-4F53-AC78-060F7053D746}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="m\__wcommon.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="m\__wtray.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="m\xm.c">
+      <Filter>m</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="m\__wcommon.h">
+      <Filter>m</Filter>
+    </ClInclude>
+    <ClInclude Include="m\__wtray.h">
+      <Filter>m</Filter>
+    </ClInclude>
+    <ClInclude Include="m\xm.h">
+      <Filter>m</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="wSerial32.rc" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="m">
+      <UniqueIdentifier>{54f580d8-2ed6-4ef8-8c02-f8b944b312b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="m\c">
+      <UniqueIdentifier>{6b5b64b9-65a9-4b01-adbc-e65c09d7d907}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="m\p">
+      <UniqueIdentifier>{9e755c48-b0a7-4d97-b279-6273e92bbac0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="m\c\CodeX.c">
+      <Filter>m\c</Filter>
+    </ClCompile>
+    <ClCompile Include="m\c\mprotocol.c">
+      <Filter>m\c</Filter>
+    </ClCompile>
+    <ClCompile Include="m\c\util.c">
+      <Filter>m\c</Filter>
+    </ClCompile>
+    <ClCompile Include="m\wcommon.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="m\wtray.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="m\xm.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="m\p\protocol_jmt.c">
+      <Filter>m\p</Filter>
+    </ClCompile>
+    <ClCompile Include="m\p\protocol_shof.c">
+      <Filter>m\p</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="m\c\CodeX.h">
+      <Filter>m\c</Filter>
+    </ClInclude>
+    <ClInclude Include="m\c\ICodeX.h">
+      <Filter>m\c</Filter>
+    </ClInclude>
+    <ClInclude Include="m\c\mprotocol.h">
+      <Filter>m\c</Filter>
+    </ClInclude>
+    <ClInclude Include="m\c\util.h">
+      <Filter>m\c</Filter>
+    </ClInclude>
+    <ClInclude Include="m\wcommon.h">
+      <Filter>m</Filter>
+    </ClInclude>
+    <ClInclude Include="m\wtray.h">
+      <Filter>m</Filter>
+    </ClInclude>
+    <ClInclude Include="m\xm.h">
+      <Filter>m</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="m\p\protocol_jmt.h">
+      <Filter>m\p</Filter>
+    </ClInclude>
+    <ClInclude Include="m\p\protocol_shof.h">
+      <Filter>m\p</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="bitGridX.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="preBuild.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="code.x.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

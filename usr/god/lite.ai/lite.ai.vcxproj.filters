@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="m">
+      <UniqueIdentifier>{8C5D12B3-B29F-4A6B-8F0D-45A1844012DC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="__nio">
+      <UniqueIdentifier>{EABDBFA9-BFB0-40B8-87FD-C1AE723E4AE9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="m\m.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)/../../../lite.io/__nio/__nhttpd.c">
+      <Filter>__nio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)/../../../lite.io/__nio/__nserial.c">
+      <Filter>__nio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)/../../../lite.io/__nio/__nshm.c">
+      <Filter>__nio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)/../../../lite.io/__nio/__nsocket.c">
+      <Filter>__nio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)/../../../lite.io/__nio/__nwebsocket.c">
+      <Filter>__nio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)/../../../lite.io/__nio/__util.c">
+      <Filter>__nio</Filter>
+    </ClCompile>
+    <ClCompile Include="m\__bitmap.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="m\mathematics.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="m\utils.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="m\__nio.c">
+      <Filter>m</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ProjectDir)/../../../lite.io/__nio/__nhttpd.h">
+      <Filter>__nio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)/../../../lite.io/__nio/__nliteio.h">
+      <Filter>__nio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)/../../../lite.io/__nio/__nserial.h">
+      <Filter>__nio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)/../../../lite.io/__nio/__nshm.h">
+      <Filter>__nio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)/../../../lite.io/__nio/__nsocket.h">
+      <Filter>__nio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)/../../../lite.io/__nio/__nwebsocket.h">
+      <Filter>__nio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)/../../../lite.io/__nio/__util.h">
+      <Filter>__nio</Filter>
+    </ClInclude>
+    <ClInclude Include="m\__bitmap.h">
+      <Filter>m</Filter>
+    </ClInclude>
+    <ClInclude Include="m\mathematics.h">
+      <Filter>m</Filter>
+    </ClInclude>
+    <ClInclude Include="m\utils.h">
+      <Filter>m</Filter>
+    </ClInclude>
+    <ClInclude Include="m\__nio.h">
+      <Filter>m</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

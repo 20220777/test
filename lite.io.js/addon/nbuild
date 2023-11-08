@@ -1,0 +1,47 @@
+#! /bin/bash
+
+################################################################################
+################################################################################
+################################################################################
+TARGET_NAME=lite.io
+TARGET=/opt/share/lite.io
+TARGET_200=/opt/200/lite.io
+
+LITEIO_PATH=../../lite.io/
+
+if [ -z $1 ]
+then
+echo $0 "[system arch] [y/n]";
+exit;
+fi
+
+rm -rf coms/$1
+mkdir -p coms/$1
+
+mkdir -p $TARGET
+mkdir -p $TARGET_200
+
+\cp -rfp $LITEIO_PATH/$1/*.h coms/$1
+\cp -rfp $LITEIO_PATH/$1/*.a coms/$1
+\cp -rfp ../lite.n/dzcf/*.h coms/$1
+\cp -rfp ../lite.n/i/*.h coms/$1
+\cp -rfp ../lite.n/n/*.h coms/$1
+\cp -rfp ../lite.n/z/*.h coms/$1
+\cp -rfp ../lite.n/out/*.a coms/$1
+
+if [ -z $2 ]
+then
+exit;
+fi
+
+if [ $2 == 'y' ]
+then
+cd ..;
+tar cvf $TARGET_NAME.tar addon
+mv $TARGET_NAME.tar $TARGET;
+cd $TARGET;
+tar xvf $TARGET_NAME.tar
+mv $TARGET_NAME.tar $TARGET_200;
+cd $TARGET_200;
+tar xvf $TARGET_NAME.tar
+fi

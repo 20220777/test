@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="kisa">
+      <UniqueIdentifier>{c19be9c0-d50d-4bcd-8ecb-cc9c16a24001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="m">
+      <UniqueIdentifier>{a4a4f35b-8f3c-471e-8df2-a96ad8605cfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kisa\drbg">
+      <UniqueIdentifier>{9837e97b-fe35-49b4-b843-e95d242dc6af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kisa\HIGHT">
+      <UniqueIdentifier>{f5798908-4272-4844-a449-0dd290bcdd6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kisa\SEED">
+      <UniqueIdentifier>{58e9ee0f-11f9-4c38-bd9b-68422cc2087a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kisa\LEA">
+      <UniqueIdentifier>{df06d7c0-e4d4-4a20-8200-8a375598144f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kisa\ARIA">
+      <UniqueIdentifier>{a9c1636b-6d89-4b7a-8592-cb8475007c4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kisa\SHA2">
+      <UniqueIdentifier>{0ad609e7-4ecb-4606-8783-dbea2932cbb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kisa\LSH">
+      <UniqueIdentifier>{21b763c8-8081-426f-b114-6b1d594f84a2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kisa\benchmark.h">
+      <Filter>kisa</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\config.h">
+      <Filter>kisa</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\cpu_info.h">
+      <Filter>kisa</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\pbkdf.h">
+      <Filter>kisa</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\dbgbuffer.h">
+      <Filter>m</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\drbg\ariacbc.h">
+      <Filter>kisa\drbg</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\drbg\drbg.h">
+      <Filter>kisa\drbg</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\drbg\seedcbc.h">
+      <Filter>kisa\drbg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util.h">
+      <Filter>m</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\KISA_ARIA.h">
+      <Filter>kisa\ARIA</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\KISA_HIGHT_CBC.h">
+      <Filter>kisa\HIGHT</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\KISA_HIGHT_CMAC.h">
+      <Filter>kisa\HIGHT</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\KISA_HIGHT_CTR.h">
+      <Filter>kisa\HIGHT</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\KISA_HIGHT_ECB.h">
+      <Filter>kisa\HIGHT</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\KISA_SEED_CBC.h">
+      <Filter>kisa\SEED</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\KISA_SEED_CCM.h">
+      <Filter>kisa\SEED</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\KISA_SEED_CCM_c.h">
+      <Filter>kisa\SEED</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\KISA_SEED_CMAC.h">
+      <Filter>kisa\SEED</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\KISA_SEED_CTR.h">
+      <Filter>kisa\SEED</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\KISA_SEED_ECB.h">
+      <Filter>kisa\SEED</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\KISA_SEED_GCM.h">
+      <Filter>kisa\SEED</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\sha256.h">
+      <Filter>kisa\SHA2</Filter>
+    </ClInclude>
+    <ClInclude Include="kisa\KISA_SHA256.h">
+      <Filter>kisa\SHA2</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\kisa_key.h">
+      <Filter>m</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="kisa\pbkdf.c">
+      <Filter>kisa</Filter>
+    </ClCompile>
+    <ClCompile Include="src\m.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\drbg\ariacbc.c">
+      <Filter>kisa\drbg</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\drbg\drbg.c">
+      <Filter>kisa\drbg</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\drbg\seedcbc.c">
+      <Filter>kisa\drbg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util.c">
+      <Filter>m</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\KISA_ARIA.c">
+      <Filter>kisa\ARIA</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\KISA_HIGHT_CBC.c">
+      <Filter>kisa\HIGHT</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\KISA_HIGHT_CMAC.c">
+      <Filter>kisa\HIGHT</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\KISA_HIGHT_CTR.c">
+      <Filter>kisa\HIGHT</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\KISA_HIGHT_ECB.c">
+      <Filter>kisa\HIGHT</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\KISA_SEED_CBC.c">
+      <Filter>kisa\SEED</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\KISA_SEED_CCM.c">
+      <Filter>kisa\SEED</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\KISA_SEED_CCM_c.c">
+      <Filter>kisa\SEED</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\KISA_SEED_CMAC.c">
+      <Filter>kisa\SEED</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\KISA_SEED_CTR.c">
+      <Filter>kisa\SEED</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\KISA_SEED_ECB.c">
+      <Filter>kisa\SEED</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\KISA_SEED_GCM.c">
+      <Filter>kisa\SEED</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\sha256.c">
+      <Filter>kisa\SHA2</Filter>
+    </ClCompile>
+    <ClCompile Include="kisa\KISA_SHA256.c">
+      <Filter>kisa\SHA2</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

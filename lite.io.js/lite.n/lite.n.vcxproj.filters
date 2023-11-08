@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="n">
+      <UniqueIdentifier>{7AFBE7EF-FEB7-430E-ABF9-1E29A57E2844}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="z">
+      <UniqueIdentifier>{EAEC3B55-6A95-4716-A6A0-67B094000BAE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dzcf">
+      <UniqueIdentifier>{7cab6301-2019-4f60-a13e-c526d3bf002f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="i">
+      <UniqueIdentifier>{c0615b59-b7b1-4696-b8b8-bfbbfa45e3f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dccf">
+      <UniqueIdentifier>{1742bbb3-2c4b-48ec-86df-1f4bd604522d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dpcf">
+      <UniqueIdentifier>{ce9c1696-c309-453a-835d-12e4b41ce11b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="z\liteio.c">
+      <Filter>z</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nwsc.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nwsd.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nhttp.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nhttpd.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nhttpsd.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nmdns.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nserial.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\ntcpd.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\ntcpsd.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\ntcp.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="dzcf\network.c">
+      <Filter>dzcf</Filter>
+    </ClCompile>
+    <ClCompile Include="i\ihttpd.c">
+      <Filter>i</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nzigbee.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="z\idebug.c">
+      <Filter>z</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nshm.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\nutils.c">
+      <Filter>n</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="postBuild.bat" />
+    <None Include="preBuild.bat" />
+    <None Include="i\winterface.i">
+      <Filter>i</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="z\liteio.h">
+      <Filter>z</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nwsc.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nwsd.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nhttp.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nhttpd.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nhttpsd.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\njson.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nmdns.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nserial.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nsvrcommon.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\ntcpd.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\ntcpsd.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\ntcp.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="dzcf\network.h">
+      <Filter>dzcf</Filter>
+    </ClInclude>
+    <ClInclude Include="i\ihttpd.h">
+      <Filter>i</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nzigbee.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="z\idebug.h">
+      <Filter>z</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nshm.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\nutils.h">
+      <Filter>n</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

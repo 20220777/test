@@ -1,0 +1,49 @@
+#! /bin/bash
+
+################################################################################
+################################################################################
+################################################################################
+if [ $1 == "all" -o $1 == "a32" ]
+then
+CROSS_COMPILE=yes ARCH_TYPE=a32 OUTPUT_TYPE=BINARY CUSTOM=no ABI=SOFT make clean;
+CROSS_COMPILE=yes ARCH_TYPE=a32 OUTPUT_TYPE=BINARY CUSTOM=no ABI=SOFT make dir;
+prebuild a32;
+CROSS_COMPILE=yes ARCH_TYPE=a32 OUTPUT_TYPE=BINARY CUSTOM=no ABI=SOFT make all;
+postbuild a32;
+fi
+
+if [ $1 == "all" -o $1 == "ha32" ]
+then
+CROSS_COMPILE=yes ARCH_TYPE=a32 OUTPUT_TYPE=BINARY CUSTOM=no ABI=HARD make clean;
+CROSS_COMPILE=yes ARCH_TYPE=a32 OUTPUT_TYPE=BINARY CUSTOM=no ABI=HARD make dir;
+prebuild hf.a32;
+CROSS_COMPILE=yes ARCH_TYPE=a32 OUTPUT_TYPE=BINARY CUSTOM=no ABI=HARD make all;
+postbuild hf.a32;
+fi
+
+if [ $1 == "all" -o $1 == "a64" ]
+then
+CROSS_COMPILE=yes ARCH_TYPE=a64 OUTPUT_TYPE=BINARY CUSTOM=no ABI=SOFT make clean;
+CROSS_COMPILE=yes ARCH_TYPE=a64 OUTPUT_TYPE=BINARY CUSTOM=no ABI=SOFT make dir;
+prebuild a64;
+CROSS_COMPILE=yes ARCH_TYPE=a64 OUTPUT_TYPE=BINARY CUSTOM=no ABI=SOFT make all;
+postbuild a64;
+fi
+
+if [ $1 == "all" -o $1 == "x32" ]
+then
+CROSS_COMPILE=no ARCH_TYPE=x32 OUTPUT_TYPE=BINARY CUSTOM=no make clean;
+CROSS_COMPILE=no ARCH_TYPE=x32 OUTPUT_TYPE=BINARY CUSTOM=no make dir;
+prebuild x32;
+CROSS_COMPILE=no ARCH_TYPE=x32 OUTPUT_TYPE=BINARY CUSTOM=no make all;
+postbuild x32;
+fi
+
+if [ $1 == "all" -o $1 == "x64" ]
+then
+CROSS_COMPILE=no ARCH_TYPE=x64 OUTPUT_TYPE=BINARY CUSTOM=no make clean;
+CROSS_COMPILE=no ARCH_TYPE=x64 OUTPUT_TYPE=BINARY CUSTOM=no make dir;
+prebuild x64;
+CROSS_COMPILE=no ARCH_TYPE=x64 OUTPUT_TYPE=BINARY CUSTOM=no make all;
+postbuild x64;
+fi

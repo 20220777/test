@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="m">
+      <UniqueIdentifier>{ff2139d3-7086-40d3-a039-889e86153153}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="n">
+      <UniqueIdentifier>{d768a461-b73f-4073-80e8-c0c39195f82e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="n\__nsocket.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\__util.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="n\__nserial.c">
+      <Filter>n</Filter>
+    </ClCompile>
+    <ClCompile Include="m\m.c">
+      <Filter>m</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="n\__nsocket.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\__util.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\__nliteio.h">
+      <Filter>n</Filter>
+    </ClInclude>
+    <ClInclude Include="n\__nserial.h">
+      <Filter>n</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

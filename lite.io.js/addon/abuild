@@ -1,0 +1,34 @@
+#! /bin/bash
+
+################################################################################
+################################################################################
+################################################################################
+TARGET=/opt/share
+
+\cp -rfp binding.gyp.a binding.gyp
+
+mkdir -p coms
+
+\cp -rfp ../../../imtif/i/*.h coms/
+\cp -rfp ../../../mtif/hf.a32/*.h coms/
+\cp -rfp ../../../mtif/hf.a32/libimtif.hf.a32.a coms/
+\cp -rfp ../../../mtif/hf.a32/libmtif.x.hf.a32.a coms/
+\cp -rfp ../../../mtif/hf.a32/libio.hf.a32.a coms/
+\cp -rfp ../../../mtif/hf.a32/imtif.hf.a32.a coms/
+\cp -rfp ../../../mtif/hf.a32/mtif.hf.a32.so coms/
+
+cd ../ngine
+build ha32a
+
+cd ../addon
+\cp -rfp ../ngine/out/libn*.hf.a32.a coms/
+\cp -rfp ../ngine/z/*.h coms/
+\cp -rfp ../ngine/n/*.h coms/
+\cp -rfp ../ngine/i/*.h coms/
+cd ..
+
+sleep 1;
+tar cvf addon.tar addon;
+mv addon.tar $TARGET;
+cd $TARGET;
+tar xvf addon.tar;

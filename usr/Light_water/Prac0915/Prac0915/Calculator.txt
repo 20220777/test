@@ -1,0 +1,12 @@
+﻿'Prac0915.exe'(Win32): 'C:\opt\team_c\usr\Light_water\Prac0915\x64\Debug\Prac0915.exe'을(를) 로드했습니다. 기호가 로드되었습니다.
+'Prac0915.exe'(Win32): 'C:\Windows\System32\ntdll.dll'을(를) 로드했습니다. 
+'Prac0915.exe'(Win32): 'C:\Windows\System32\kernel32.dll'을(를) 로드했습니다. 
+'Prac0915.exe'(Win32): 'C:\Windows\System32\KernelBase.dll'을(를) 로드했습니다. 
+'Prac0915.exe'(Win32): 'C:\Windows\System32\vcruntime140d.dll'을(를) 로드했습니다. 
+'Prac0915.exe'(Win32): 'C:\Windows\System32\ucrtbased.dll'을(를) 로드했습니다. 
+0x760 스레드가 종료되었습니다(코드: 0 (0x0)).
+'Prac0915.exe'(Win32): 'C:\Windows\System32\kernel.appcore.dll'을(를) 로드했습니다. 
+'Prac0915.exe'(Win32): 'C:\Windows\System32\msvcrt.dll'을(를) 로드했습니다. 
+0x4c88 스레드가 종료되었습니다(코드: 0 (0x0)).
+0xa60 스레드가 종료되었습니다(코드: 0 (0x0)).
+'[14412] Prac0915.exe' 프로그램이 종료되었습니다(코드: 0 (0x0)).

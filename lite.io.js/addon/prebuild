@@ -1,0 +1,12 @@
+#! /bin/bash
+
+LITEIO_N=../lite.n/
+mkdir -p coms/$1
+
+\cp -rfp ../../lite.io/$1/*.h                           coms/$1
+\cp -rfp ../../lite.io/$1/*.a                           coms/$1
+\cp -rfp $LITEIO_N/out/*$1.a                            coms/$1
+\cp -rfp $LITEIO_N/dzcf/*.h                             coms/$1
+\cp -rfp $LITEIO_N/i/*.h                                coms/$1
+\cp -rfp $LITEIO_N/n/*.h                                coms/$1
+\cp -rfp $LITEIO_N/z/*.h                                coms/$1

@@ -1,0 +1,178 @@
+#! /bin/bash
+
+
+if [ -z $1 ]
+then
+echo $0 "[system arch] [nmodule]";
+exit;
+fi
+
+if [ -z $2 ]
+then
+echo $0 "[system arch] [nmodule]";
+exit;
+fi
+
+ARCH=$1
+NMODULE=$2
+TARGET=binding.gyp
+
+if [ $1 == "x86" -o $1 == "x86_64" ]
+then
+EXT=lib;
+DEBUG_FLAGS+="
+	\"-D__LINUX__=0\",
+	\"-D__WIN32__=1\",
+	";
+else
+EXT=a;
+DEBUG_FLAGS+="
+	\"-D__LINUX__=1\",
+	\"-D__WIN32__=0\",
+	";
+fi
+
+
+if [ $2 == "http" ]
+then
+DEBUG_FLAGS+="\"-D__NHTTP__=1\",";
+else
+DEBUG_FLAGS+="\"-D__NHTTP__=0\",";
+fi
+
+if [ $2 == "httpd" ]
+then
+DEBUG_FLAGS+="\"-D__NHTTPD__=1\",";
+else
+DEBUG_FLAGS+="\"-D__NHTTPD__=0\",";
+fi
+
+if [ $2 == "httpsd" ]
+then
+DEBUG_FLAGS+="\"-D__NHTTPSD__=1\",";
+else
+DEBUG_FLAGS+="\"-D__NHTTPSD__=0\",";
+fi
+
+
+if [ $2 == "serial" ]
+then
+DEBUG_FLAGS+="\"-D__NSERIAL__=1\",";
+else
+DEBUG_FLAGS+="\"-D__NSERIAL__=0\",";
+fi
+
+if [ $2 == "tcp" ]
+then
+DEBUG_FLAGS+="\"-D__NTCP__=1\",";
+else
+DEBUG_FLAGS+="\"-D__NTCP__=0\",";
+fi
+
+
+if [ $2 == "tcpd" ]
+then
+DEBUG_FLAGS+="\"-D__NTCPD__=1\",";
+else
+DEBUG_FLAGS+="\"-D__NTCPD__=0\",";
+fi
+
+if [ $2 == "tcpsd" ]
+then
+DEBUG_FLAGS+="\"-D__NTCPSD__=1\",";
+else
+DEBUG_FLAGS+="\"-D__NTCPSD__=0\",";
+fi
+
+
+if [ $2 == "wsc" ]
+then
+DEBUG_FLAGS+="\"-D__NWSC__=1\",";
+else
+DEBUG_FLAGS+="\"-D__NWSC__=0\",";
+fi
+
+if [ $2 == "wsd" ]
+then
+DEBUG_FLAGS+="\"-D__NWSD__=1\",";
+else
+DEBUG_FLAGS+="\"-D__NWSD__=0\",";
+fi
+
+if [ $2 == "shm" ]
+then
+DEBUG_FLAGS+="\"-D__NSHM__=1\",";
+else
+DEBUG_FLAGS+="\"-D__NSHM__=0\",";
+fi
+
+if [ $2 == "mdns" ]
+then
+DEBUG_FLAGS+="\"-D__NMDNS__=1\",";
+else
+DEBUG_FLAGS+="\"-D__NMDNS__=0\",";
+fi
+
+BINDING="
+{
+  \"targets\": [
+    {
+      \"target_name\": \"liteio_${NMODULE}_${ARCH}\",
+      \"sources\" : [
+        \"./nxx/m.c\",
+      ],
+      \"include_dirs\" : [
+        \"./\",
+        \"./nxx\",
+        \"./coms\",
+        \"./coms/$ARCH\",
+      ],
+      \"link_settings\" : {
+        \"libraries\" : [
+          \"<(module_root_dir)/coms/$ARCH/liblite.n.$ARCH.$EXT\",
+          \"<(module_root_dir)/coms/$ARCH/liblite.io.$ARCH.$EXT\",
+          \"<(module_root_dir)/coms/$ARCH/libio.$ARCH.$EXT\",
+        ],
+      },
+      \"cflags\" : [
+        \"-O2\",
+        \"-fPIC\",
+        \"-std=c++11\",
+        \"-fpermissive\",
+        \"-D__DEBUG__=1\",
+        \"-D__DRBG_CHECK__=0\",
+        \"-D__HTTP__=1\",
+        \"-D__MIME__=1\",
+        \"-D__SHM__=1\",
+        \"-D__NIC__=0\",
+        \"-D__CGI__=0\",
+        \"-D__XML__=0\",
+        \"-D__SERIAL__=1\",
+        \"-D__SOCKET__=1\",
+        \"-D__PACKET__=1\",
+        \"-D__DBC__=0\",
+        \"-D__SHA1__=1\",
+        \"-D__LIST__=0\",
+        \"-D__QUEUE__=0\",
+        \"-D__STACK__=0\",
+        \"-D__JSON__=1\",
+        \"-D__SYSQUEUE__=0\",
+        \"-D__TRIGONOMETRIC__=1\",
+        \"-D__SSL_TLS__=0\",
+        \"-D__CUSTOM_X_SOCKET__=1\",
+        \"-D__CUSTOM_X_HTTP__=1\",
+        \"-D__CUSTOM_X_HTTPD__=1\",
+        \"-D__CUSTOM_X_HTTPSD__=1\",
+        \"-D__CUSTOM_X_WS__=1\",
+        \"-D__CUSTOM_X_SERIAL__=1\",
+        \"-D__CUSTOM_X_SIFR__=0\",
+        \"-D__STATIC_LIB__=1\",
+        \"-D__NODE__=1\",
+				$DEBUG_FLAGS
+      ]
+    }
+  ]
+}
+";
+
+echo $BINDING > $TARGET

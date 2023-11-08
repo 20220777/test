@@ -1,0 +1,27 @@
+#! /bin/bash
+
+ADDON_PATH=../addon/
+mkdir -p $ADDON_PATH/coms/$1
+
+ADDON_EX_PATH=../addon.ex/
+mkdir -p $ADDON_EX_PATH/coms/$1
+
+
+\cp -rfp ../../lite.io/$1/*.h                 $ADDON_PATH/coms/$1
+\cp -rfp ../../lite.io/$1/*.a                 $ADDON_PATH/coms/$1
+\cp -rfp out/*$1.a                            $ADDON_PATH/coms/$1
+\cp -rfp dzcf/*.h                             $ADDON_PATH/coms/$1
+\cp -rfp i/*.h                                $ADDON_PATH/coms/$1
+\cp -rfp n/*.h                                $ADDON_PATH/coms/$1
+\cp -rfp z/*.h                                $ADDON_PATH/coms/$1
+
+
+
+\cp -rfp ../../lite.io/$1/*.h                 $ADDON_EX_PATH/coms/$1
+\cp -rfp ../../lite.io/$1/*.a                 $ADDON_EX_PATH/coms/$1
+\cp -rfp out/*$1.a                            $ADDON_EX_PATH/coms/$1
+\cp -rfp dzcf/*.h                             $ADDON_EX_PATH/coms/$1
+\cp -rfp i/*.h                                $ADDON_EX_PATH/coms/$1
+\cp -rfp n/*.h                                $ADDON_EX_PATH/coms/$1
+\cp -rfp z/*.h                                $ADDON_EX_PATH/coms/$1
+

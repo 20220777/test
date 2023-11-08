@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="kbkdf">
+      <UniqueIdentifier>{64e76bae-a137-4ce6-84c1-8bf573c6ae4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kcdsa">
+      <UniqueIdentifier>{cc75a74d-3b2e-43ae-895a-5415a48a0139}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ec-kcdsa">
+      <UniqueIdentifier>{297b27a0-48f1-499d-8961-91dad8c58d3e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="m.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="__util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sha3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kbkdf\KISA_HMAC.c">
+      <Filter>kbkdf</Filter>
+    </ClCompile>
+    <ClCompile Include="kbkdf\KISA_KBKDF.c">
+      <Filter>kbkdf</Filter>
+    </ClCompile>
+    <ClCompile Include="kbkdf\KISA_SEED.c">
+      <Filter>kbkdf</Filter>
+    </ClCompile>
+    <ClCompile Include="kbkdf\KISA_SHA256.c">
+      <Filter>kbkdf</Filter>
+    </ClCompile>
+    <ClCompile Include="kbkdf\main.c">
+      <Filter>kbkdf</Filter>
+    </ClCompile>
+    <ClCompile Include="kbkdf\util.c">
+      <Filter>kbkdf</Filter>
+    </ClCompile>
+    <ClCompile Include="kbkdf\kbkdf_test.c">
+      <Filter>kbkdf</Filter>
+    </ClCompile>
+    <ClCompile Include="kbkdf\KISA_CMAC.c">
+      <Filter>kbkdf</Filter>
+    </ClCompile>
+    <ClCompile Include="ossl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kcdsa\bignum.c">
+      <Filter>kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="kcdsa\kcdsa.c">
+      <Filter>kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="kcdsa\kcdsa_main.c">
+      <Filter>kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="kcdsa\KCDSA_SHA224.c">
+      <Filter>kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="kcdsa\KCDSA_SHA256.c">
+      <Filter>kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="ec_kcdsa\ec_gf2n.c">
+      <Filter>ec-kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="ec_kcdsa\ec_gfp.c">
+      <Filter>ec-kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="ec_kcdsa\ec_kcdsa_main.c">
+      <Filter>ec-kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="ec_kcdsa\EC_KCDSA_SHA224.c">
+      <Filter>ec-kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="ec_kcdsa\EC_KCDSA_SHA256.c">
+      <Filter>ec-kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="ec_kcdsa\ecc.c">
+      <Filter>ec-kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="ec_kcdsa\ec-kcdsa.c">
+      <Filter>ec-kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="ec_kcdsa\gf2n.c">
+      <Filter>ec-kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="ec_kcdsa\gfp.c">
+      <Filter>ec-kcdsa</Filter>
+    </ClCompile>
+    <ClCompile Include="ec_kcdsa\mpz.c">
+      <Filter>ec-kcdsa</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kisa_key.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="__util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sha3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kbkdf\KISA_HMAC.h">
+      <Filter>kbkdf</Filter>
+    </ClInclude>
+    <ClInclude Include="kbkdf\KISA_KBKDF.h">
+      <Filter>kbkdf</Filter>
+    </ClInclude>
+    <ClInclude Include="kbkdf\KISA_SEED.h">
+      <Filter>kbkdf</Filter>
+    </ClInclude>
+    <ClInclude Include="kbkdf\KISA_SHA256.h">
+      <Filter>kbkdf</Filter>
+    </ClInclude>
+    <ClInclude Include="kbkdf\util.h">
+      <Filter>kbkdf</Filter>
+    </ClInclude>
+    <ClInclude Include="kbkdf\common.h">
+      <Filter>kbkdf</Filter>
+    </ClInclude>
+    <ClInclude Include="kbkdf\kbkdf_test.h">
+      <Filter>kbkdf</Filter>
+    </ClInclude>
+    <ClInclude Include="kbkdf\KISA_CMAC.h">
+      <Filter>kbkdf</Filter>
+    </ClInclude>
+    <ClInclude Include="ossl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kcdsa\bignum.h">
+      <Filter>kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="kcdsa\kcdsa.h">
+      <Filter>kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="kcdsa\kcdsa_main.h">
+      <Filter>kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="kcdsa\KCDSA_SHA224.h">
+      <Filter>kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="kcdsa\KCDSA_SHA256.h">
+      <Filter>kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="kcdsa\kcdsa_type.h">
+      <Filter>kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_kcdsa\ec_gf2n.h">
+      <Filter>ec-kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_kcdsa\ec_gfp.h">
+      <Filter>ec-kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_kcdsa\ec_kcdsa_main.h">
+      <Filter>ec-kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_kcdsa\EC_KCDSA_SHA224.h">
+      <Filter>ec-kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_kcdsa\EC_KCDSA_SHA256.h">
+      <Filter>ec-kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_kcdsa\ecc.h">
+      <Filter>ec-kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_kcdsa\ec-kcdsa.h">
+      <Filter>ec-kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_kcdsa\gf2n.h">
+      <Filter>ec-kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_kcdsa\gfp.h">
+      <Filter>ec-kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_kcdsa\mpz.h">
+      <Filter>ec-kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_kcdsa\sysconf.h">
+      <Filter>ec-kcdsa</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_kcdsa\type.h">
+      <Filter>ec-kcdsa</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

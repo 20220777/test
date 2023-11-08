@@ -1,0 +1,13 @@
+#!/bin/bash
+
+TOP=`pwd`
+
+# cd /lib/systemd/system
+# ln -s $TOP/out/node.c.service .
+# systemctl status node.c.service
+# systemctl daemon-reload
+# systemctl enable node.c.service
+# systemctl start node.c.service
+
+
+$TOP/out/ngine.$1.out --m console --d WAAS_NODE --s WAAS_NODE --X $TOP/out/code.X.$1.so  --l $TOP/out/log --e d7 --httpd_home /opt/iiot/www --httpd_index index.html

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="postBuild.bat" />
+    <None Include="preBuild.bat" />
+    <None Include="versionOut.bat" />
+    <None Include="versionBuild.bat" />
+    <None Include="u\ioSocketKey" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="jpeg-8c">
+      <UniqueIdentifier>{2b29f80c-ff86-47e1-8d3c-39d9fc08312c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="i">
+      <UniqueIdentifier>{c4178350-065d-494c-9445-8f5a57c1d317}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="jpeg-8c\wrbmp.c">
+      <Filter>jpeg-8c</Filter>
+    </ClCompile>
+    <ClCompile Include="jpeg-8c\wrgif.c">
+      <Filter>jpeg-8c</Filter>
+    </ClCompile>
+    <ClCompile Include="jpeg-8c\wrppm.c">
+      <Filter>jpeg-8c</Filter>
+    </ClCompile>
+    <ClCompile Include="jpeg-8c\wrtarga.c">
+      <Filter>jpeg-8c</Filter>
+    </ClCompile>
+    <ClCompile Include="jpeg-8c\cdjpeg.c">
+      <Filter>jpeg-8c</Filter>
+    </ClCompile>
+    <ClCompile Include="jpeg-8c\rdbmp.c">
+      <Filter>jpeg-8c</Filter>
+    </ClCompile>
+    <ClCompile Include="jpeg-8c\rdgif.c">
+      <Filter>jpeg-8c</Filter>
+    </ClCompile>
+    <ClCompile Include="jpeg-8c\rdppm.c">
+      <Filter>jpeg-8c</Filter>
+    </ClCompile>
+    <ClCompile Include="jpeg-8c\rdtarga.c">
+      <Filter>jpeg-8c</Filter>
+    </ClCompile>
+    <ClCompile Include="i\xjpeg.c">
+      <Filter>i</Filter>
+    </ClCompile>
+    <ClCompile Include="i\ximage.c">
+      <Filter>i</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="i\ximage.h">
+      <Filter>i</Filter>
+    </ClInclude>
+    <ClInclude Include="i\xjpeg.h">
+      <Filter>i</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
